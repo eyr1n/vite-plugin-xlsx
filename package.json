@@ -1,0 +1,41 @@
+{
+  "name": "@eyr1n/vite-plugin-xlsx",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./client": {
+      "types": "./client.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "client.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "biome": "biome check"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vite": ">=8"
+  },
+  "dependencies": {
+    "read-excel-file": "^9.3.12"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
